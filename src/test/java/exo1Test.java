@@ -34,8 +34,8 @@ public class exo1Test {
     @Test
     void testCountVowelsBasic() {
         assertEquals(3, Tp1.countVowels("bonjour"));
-        assertEquals(2, Tp1.countVowels("chat"));
-        assertEquals(0, Tp1.countVowels("rhythme"));
+        assertEquals(1, Tp1.countVowels("chat"));
+        assertEquals(2, Tp1.countVowels("rhythme"));
     }
 
     @Test
