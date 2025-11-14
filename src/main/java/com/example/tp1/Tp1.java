@@ -6,8 +6,14 @@ public class Tp1 {
      * Exemple : "A man a plan a canal Panama" -> true
      */
     public static boolean isPalindrome(String input) {
-        //TODO
-        return false;
+		if(input == null) {
+			throw new IllegalArgumentException("Input is null");
+		}
+		StringBuilder builder = new StringBuilder(input);
+		String inputReversed = builder.reverse().toString();
+
+
+     return input.compareTo(inputReversed) == 0;
     }
 
     /**
@@ -15,8 +21,17 @@ public class Tp1 {
      * Exemple : "bonjour" -> 3
      */
     public static int countVowels(String input) {
-        //TODO
-        return 0;
+		if(input == null) {
+			throw new IllegalArgumentException("Input is null");
+		}
+		String voyelle = "aeiouyAEIOUY";
+		int compteur = 0;
+		for(Character c : input.toCharArray()) {
+			if(voyelle.contains(c.toString())){
+				compteur++;
+			}
+		}
+		return compteur;
     }
 
     /**
@@ -24,7 +39,7 @@ public class Tp1 {
      * Exemple : "abc" -> "cba"
      */
     public static String reverse(String input) {
-        //TODO
-        return null;
+		StringBuilder builder = new StringBuilder(input);
+		return builder.reverse().toString();
     }
 }
